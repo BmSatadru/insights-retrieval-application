@@ -8,10 +8,6 @@
     {
       "src": "api/another_endpoint.py",
       "use": "@vercel/python"
-    },
-    {
-      "src": "api/routes.py",
-      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -24,8 +20,8 @@
       "dest": "/api/another_endpoint.py"
     },
     {
-      "src": "/api/routes",
-      "dest": "/api/routes.py"
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     }
   ]
-} 
+}

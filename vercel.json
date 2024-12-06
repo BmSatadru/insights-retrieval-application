@@ -3,11 +3,24 @@
   "builds": [
     {
       "src": "api/upload.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
     },
     {
       "src": "api/another_endpoint.py",
-      "use": "@vercel/python"
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
+    },
+    {
+      "src": "api/routes.py",
+      "use": "@vercel/python",
+      "config": {
+        "runtime": "python3.9"
+      }
     }
   ],
   "routes": [
@@ -20,8 +33,16 @@
       "dest": "/api/another_endpoint.py"
     },
     {
+      "src": "/api/routes",
+      "dest": "/api/routes.py"
+    },
+    {
       "src": "/static/(.*)",
       "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/public/$1"
     }
   ]
 }

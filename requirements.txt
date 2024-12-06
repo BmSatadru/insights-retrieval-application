@@ -1,14 +1,8 @@
 Flask==2.2.2
 Werkzeug==2.2.2
-# Only include dotenv if you need it for local development
-# python-dotenv==0.21.0
-
-# Add only necessary dependencies
-# Example: PyPDF2 for PDF processing
 PyPDF2==3.0.1
-
-# If you use requests for HTTP requests
+google-api-python-client==2.108.0
+google-cloud-core==2.3.3
+google-generativeai==0.3.1
+python-dotenv==0.21.0
 requests==2.28.1
-
-# If you have specific dependencies for your services, include them
-# e.g., a library for your Gemini service
